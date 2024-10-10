@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione e Tabella Dati</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestione Dati Utenti</h1>
+    </header>
+
+    <main>
+        <!-- Sezione Login -->
+        <section class="login-form card">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Nome Utente</label>
+                <input type="text" id="loginUsername" required aria-label="Nome Utente"><br>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required aria-label="Password"><br>
+
+                <button type="submit">Accedi</button>
+            </form>
+        </section>
+
+        <p>Password Dimenticata? <a href="forgot-password.html">Reimposta la tua password</a></p>
+        <p>Non hai un account? <a href="registrati.html">Registrati</a></p>
+
+        <!-- Dashboard Utente -->
+        <section class="user-dashboard card" style="display: none;">
+            <h2>Benvenuto nella tua Dashboard</h2>
+            <form id="dataForm">
+                <label for="dataEntry">Inserisci Dato</label>
+                <input type="text" id="dataEntry" required aria-label="Inserisci dato"><br>
+                <button type="submit">Aggiungi Dato</button>
+            </form>
+
+            <h3>I tuoi dati</h3>
+            <table id="dataTable" aria-label="Tabella Dati">
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <button id="logoutButton">Esci</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestione Dati Utenti - Accessibile e Sicuro</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
